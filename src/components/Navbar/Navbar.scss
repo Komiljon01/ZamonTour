@@ -1,0 +1,130 @@
+#nav {
+  background-color: #22b3c1;
+  color: #fff;
+  padding: 15px 0;
+
+  .wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .nav__logo {
+    width: 30%;
+    img {
+      width: 160px;
+    }
+  }
+
+  .open-menu,
+  .close-menu {
+    font-size: 25px;
+    cursor: pointer;
+    display: none;
+  }
+
+  .nav__menu {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav__lists,
+    .nav__lang-socialmedia,
+    .nav__lang,
+    .nav__socialmedia {
+      display: flex;
+      align-items: center;
+
+      a {
+        transition: color 0.3s ease;
+      }
+    }
+
+    .nav__lists a:hover {
+      color: gainsboro;
+    }
+
+    .nav__lists li.active {
+      a {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          content: "";
+          top: -3px;
+          width: 50%;
+          height: 1.5px;
+          background-color: #fff;
+          transition: background-color 0.3s ease;
+        }
+      }
+
+      &:hover a::before {
+        background-color: gainsboro !important;
+      }
+    }
+
+    .nav__lists-item {
+      padding: 8px 15px;
+      font-size: 15px;
+      letter-spacing: 0.5px;
+    }
+
+    .nav__lang-socialmedia,
+    .nav__lang,
+    .nav__socialmedia {
+      gap: 20px;
+
+      a {
+        font-size: 15px;
+      }
+    }
+
+    .nav__lang a:hover {
+      color: #000;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #nav {
+    .open-menu,
+    .close-menu {
+      display: block;
+    }
+
+    .nav__menu {
+      position: absolute;
+      width: 60%;
+      height: 100vh;
+      top: 0;
+      right: 0;
+      background-color: rgb(34, 179, 193);
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      transition: transform 0.3s ease;
+      transform: translateX(100%);
+
+      &.active {
+        transform: translateX(0%);
+      }
+
+      .close-menu {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+      }
+
+      .nav__lists,
+      .nav__lang-socialmedia,
+      .nav__lang,
+      .nav__socialmedia {
+        flex-direction: column;
+      }
+    }
+  }
+}

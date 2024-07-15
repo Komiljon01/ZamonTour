@@ -1,0 +1,205 @@
+.hero__slider {
+  &-content {
+    text-align: center;
+  }
+
+  &-title {
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  &-location {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
+  .hero__slider-info_btn,
+  .hero__slider-content-btn {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    background-color: rgb(34, 179, 193);
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 25px;
+    border: none;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .hero__slider-content-btn:hover {
+    background-color: #fff;
+    color: #22b3c1;
+  }
+
+  .hero__slider-info_btn:hover {
+    opacity: 0.8;
+  }
+
+  &-info {
+    margin-top: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    background-color: #fff;
+    color: black;
+    padding: 30px 60px;
+    border-radius: 61px;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  &-population,
+  &-territory,
+  &-avgPrice {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    p {
+      font-size: 15px;
+      color: rgb(175, 175, 175);
+      font-weight: 400;
+    }
+
+    h4 {
+      font-size: 20px;
+      color: rgb(34, 179, 193);
+      font-weight: 700;
+      line-height: 28px;
+    }
+  }
+
+  &-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #22b3c1;
+    color: #22b3c1;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .hero__slider {
+    &-info {
+      gap: 40px;
+    }
+
+    &-population,
+    &-territory,
+    &-avgPrice {
+      gap: 15px;
+
+      p {
+        font-size: 13px;
+      }
+
+      h4 {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .hero__slider {
+    &-info {
+      gap: 30px;
+    }
+
+    &-population,
+    &-territory,
+    &-avgPrice {
+      gap: 10px;
+    }
+
+    &-circle {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .hero__slider {
+    &-info {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero__slider {
+    &-title {
+      font-size: 18px;
+    }
+
+    &-location {
+      font-size: 35px;
+      margin: 15px 0;
+    }
+    &-info {
+      margin-top: 30px;
+      gap: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero__slider {
+    &-info {
+      gap: 15px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 20px;
+      padding: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .hero__slider {
+    &-title {
+      font-size: 16px;
+    }
+
+    &-location {
+      font-size: 28px;
+      margin: 10px 0;
+    }
+    &-info {
+      margin-top: 20px;
+      gap: 15px;
+    }
+
+    &-population,
+    &-territory,
+    &-avgPrice {
+      p {
+        font-size: 15px;
+      }
+
+      h4 {
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 18px;
+      }
+    }
+
+    &-circle {
+      width: 40px;
+      height: 40px;
+      font-size: 15px;
+    }
+  }
+}

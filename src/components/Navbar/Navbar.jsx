@@ -8,9 +8,20 @@ import { useState } from "react";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
+  const setNavbarFixed = () => {
+    if (window.scrollY >= 700) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", setNavbarFixed);
 
   return (
-    <nav id="nav">
+    <nav className={`nav ${navbar ? "activeNav" : ""}`}>
       <div className="container">
         <div className="wrapper">
           <a href="/" className="nav__logo">

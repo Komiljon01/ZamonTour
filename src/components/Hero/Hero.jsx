@@ -37,6 +37,8 @@ function Hero() {
                 backgroundImage: `url(${data.image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                backgroundBlendMode: "multiply",
               }}
             >
               <HeroSlider

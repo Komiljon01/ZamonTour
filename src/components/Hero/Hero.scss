@@ -3,15 +3,20 @@
 
   .swiper-slide {
     padding: 0 15px;
-    background-color: rgba(0, 0, 0, 0.7);
   }
 
   .hero__slider {
     color: #fff;
   }
 
+  .swiper-pagination-bullet {
+    background-color: #000;
+    opacity: 0.6;
+  }
+
   .swiper-pagination-bullet-active {
     background-color: rgb(34, 179, 193);
+    opacity: 1;
   }
 
   .swiper-pagination {

@@ -35,6 +35,13 @@ import antalyaVisit from "../assets/images/visit-antalya.jpg";
 import istanbulVisit from "../assets/images/visit-istanbul.jpg";
 import sharmVisit from "../assets/images/visit-sharm.jpg";
 
+// Locations Images
+import dubaiPanel from "../assets/images/panel-dubai.jpg";
+import antalyaPanel from "../assets/images/panel-antalya.jpg";
+import istanbulPanel from "../assets/images/panel-istanbul.jpg";
+import parisPanel from "../assets/images/panel-paris.jpg";
+import sharmPanel from "../assets/images/panel-sharm.jpg";
+
 export const heroSliderData = [
   {
     id: 1,
@@ -248,5 +255,43 @@ export const visitData = [
     territory: "551.500 km",
     price: " $425.600",
     image: istanbulVisit,
+  },
+];
+
+export const locationsData = [
+  {
+    id: 28,
+    title: "Dubai",
+    population: "2M",
+    image: dubaiPanel,
+    active: true,
+  },
+  {
+    id: 29,
+    title: "Antalya",
+    population: "3.5M",
+    image: antalyaPanel,
+    active: false,
+  },
+  {
+    id: 30,
+    title: "Istanbul",
+    population: "4.1M",
+    image: istanbulPanel,
+    active: false,
+  },
+  {
+    id: 31,
+    title: "Sharm El-Sheikh",
+    population: "4M",
+    image: sharmPanel,
+    active: false,
+  },
+  {
+    id: 32,
+    title: "Paris",
+    population: "3M",
+    image: parisPanel,
+    active: false,
   },
 ];

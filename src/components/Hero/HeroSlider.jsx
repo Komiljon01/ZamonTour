@@ -1,10 +1,9 @@
-import { heroSliderData } from "../../data";
 import "./HeroSlider.scss";
 import { FaUserAlt } from "react-icons/fa";
 import { FaGlobe } from "react-icons/fa";
 import { TiHome } from "react-icons/ti";
 
-function HeroSlider({ location, population, territory, avgPrice, image }) {
+function HeroSlider({ location, population, territory, avgPrice }) {
   return (
     <>
       <div className="hero__slider-content">

@@ -43,7 +43,6 @@ function Hero() {
             >
               <HeroSlider
                 location={data.location}
-                image={data.image}
                 population={data.population}
                 territory={data.territory}
                 avgPrice={data.avgPrice}

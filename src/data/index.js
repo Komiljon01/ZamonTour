@@ -14,6 +14,17 @@ import offer6 from "../assets/images/offer-6.jpg";
 import offer7 from "../assets/images/offer-7.jpg";
 import offer8 from "../assets/images/offer-8.jpg";
 
+// Visa Images
+import visa1 from "../assets/images/visa-1.jpg";
+import visa2 from "../assets/images/visa-2.jpg";
+import visa3 from "../assets/images/visa-3.jpeg";
+import visa4 from "../assets/images/visa-4.jpg";
+import visa5 from "../assets/images/visa-5.jpg";
+import visa6 from "../assets/images/visa-6.jpg";
+import visa7 from "../assets/images/visa-7.jpg";
+import visa8 from "../assets/images/visa-8.jpg";
+import visa9 from "../assets/images/visa-9.jpg";
+
 export const heroSliderData = [
   {
     id: 1,
@@ -112,5 +123,62 @@ export const offersSliderData = [
     price: "$785",
     people: 345,
     image: offer3,
+  },
+];
+
+export const visaSliderData = [
+  {
+    id: 14,
+    title: "Antalya",
+    people: 500,
+    image: visa1,
+  },
+  {
+    id: 15,
+    title: "Sharm El-Sheikh",
+    people: 200,
+    image: visa2,
+  },
+  {
+    id: 16,
+    title: "USA",
+    people: 400,
+    image: visa3,
+  },
+  {
+    id: 17,
+    title: "England",
+    people: 234,
+    image: visa4,
+  },
+  {
+    id: 18,
+    title: "Canada",
+    people: 345,
+    image: visa5,
+  },
+  {
+    id: 19,
+    title: "Canada",
+    people: 445,
+    image: visa6,
+  },
+  {
+    id: 20,
+    title: "European Union",
+    people: 245,
+    image: visa7,
+  },
+  {
+    id: 21,
+    title: "Istanbul",
+    people: 645,
+    image: visa8,
+  },
+  {
+    id: 22,
+    title: "Dubai",
+    people: 345,
+    image: visa9,
   },
 ];

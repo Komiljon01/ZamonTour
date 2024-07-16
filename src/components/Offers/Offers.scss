@@ -30,13 +30,13 @@
     margin-top: 220px;
     border: 1px solid #22b3c1;
     background-color: transparent;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     transition: background-color 0.3s ease;
 
     &::after {
-      font-size: 30px;
+      font-size: 15px;
       transition: color 0.3s ease;
       color: #22b3c1;
     }
@@ -51,11 +51,11 @@
   }
 
   .swiper-button-next {
-    right: 44%;
+    right: 45%;
   }
 
   .swiper-button-prev {
-    left: 44%;
+    left: 45%;
   }
 
   .offers__slider-item {
@@ -220,9 +220,22 @@
   }
 }
 
+@media screen and (max-width: 950px) {
+  .offers {
+    .swiper-button-next {
+      right: 44%;
+    }
+
+    .swiper-button-prev {
+      left: 44%;
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .offers {
-    &__title, &__text {
+    &__title,
+    &__text {
       width: 75%;
     }
     .swiper-button-next {
@@ -237,7 +250,6 @@
 
 @media screen and (max-width: 700px) {
   .offers {
-    border: 1px solid red;
     padding-top: 50px;
     padding-bottom: 50px;
     &__title {
@@ -493,11 +505,11 @@
     }
 
     .swiper-button-next {
-      right: 34%;
+      right: 32%;
     }
 
     .swiper-button-prev {
-      left: 34%;
+      left: 32%;
     }
   }
 }

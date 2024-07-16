@@ -36,11 +36,11 @@ function Destinations() {
 
                   <p className="destination__card-text">
                     Embark on a railway adventure and explore destinations
-                    worldwide. Whether it's the picturesque landscapes, bustling
-                    cities, or cultural gems, our rail services offer a unique
-                    and comfortable way to traverse the globe. Immerse yourself
-                    in the beauty of different cultures, all accessible through
-                    our extensive railway network. .
+                    worldwide. Whether it&#39;s the picturesque landscapes,
+                    bustling cities, or cultural gems, our rail services offer a
+                    unique and comfortable way to traverse the globe. Immerse
+                    yourself in the beauty of different cultures, all accessible
+                    through our extensive railway network. .
                   </p>
                 </div>
               </div>

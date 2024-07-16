@@ -29,6 +29,12 @@ import visa9 from "../assets/images/visa-9.jpg";
 import train from "../assets/images/train.jpg";
 import airplane from "../assets/images/airplane.jpg";
 
+// Visit Images
+import dubaiVisit from "../assets/images/visit-dubai.jpg";
+import antalyaVisit from "../assets/images/visit-antalya.jpg";
+import istanbulVisit from "../assets/images/visit-istanbul.jpg";
+import sharmVisit from "../assets/images/visit-sharm.jpg";
+
 export const heroSliderData = [
   {
     id: 1,
@@ -199,5 +205,48 @@ export const destinationsData = [
     title: "Discover Exciting Air Travel Deals",
     text: "Global Destinations",
     image: airplane,
+  },
+];
+
+export const visitData = [
+  {
+    id: 24,
+    title: "Dubai",
+    country: "United Arab Emirated",
+    info: "Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks.",
+    people: "8.66 M People",
+    territory: "41.290 km",
+    price: " $1.100.200",
+    image: dubaiVisit,
+  },
+  {
+    id: 25,
+    title: "Antalya",
+    country: "Turkey",
+    info: "Antalya is the fastest-growing city in Turkey, and tourists from around the world are discovering its fabulous mix of great beaches and traditional Turkish culture. Kids will love the Beach Park, which features Aqua Land (a waterslide-fanatic's dream) and Dolphin Land (home to dolphins, sea lions and white whales). Make sure to explore the old town center and to see Hadrian's Gate.",
+    people: "44.48 M People",
+    territory: "275.400 km",
+    price: " $946.000",
+    image: antalyaVisit,
+  },
+  {
+    id: 26,
+    title: "Sharm El-Sheikh",
+    country: "Egypt",
+    info: "Sharm El Sheikh is the center of tourism action in Sinai Peninsula and it has the world top diving sites. Specially the underwater wonders of Ras Mohammed national park that took Sharm city to whole different level. The city has diving and shipwreck sites that attract both advanced and recreational divers from around the world to discover the un parallel marine life deep down the red sea",
+    people: "67.41 M People",
+    territory: "551.500 km",
+    price: " $425.600",
+    image: sharmVisit,
+  },
+  {
+    id: 27,
+    title: "Istanbul",
+    country: "Turkey",
+    info: "Istanbul is the most populous city in Turkey and its cultural, economic and historic center. It is located in north-western part of Turkey, divided into European and Asian side by Bosphorus, which connects the Sea of Marmara and Black Sea. It is the only city in the world that sits on two continents.",
+    people: "67.41 M People",
+    territory: "551.500 km",
+    price: " $425.600",
+    image: istanbulVisit,
   },
 ];

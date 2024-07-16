@@ -25,6 +25,10 @@ import visa7 from "../assets/images/visa-7.jpg";
 import visa8 from "../assets/images/visa-8.jpg";
 import visa9 from "../assets/images/visa-9.jpg";
 
+// Destinations Images
+import train from "../assets/images/train.jpg";
+import airplane from "../assets/images/airplane.jpg";
+
 export const heroSliderData = [
   {
     id: 1,
@@ -180,5 +184,20 @@ export const visaSliderData = [
     title: "Dubai",
     people: 345,
     image: visa9,
+  },
+];
+
+export const destinationsData = [
+  {
+    id: 23,
+    title: "Cheap Railway Tickets With Us",
+    text: "Whole world",
+    image: train,
+  },
+  {
+    id: 24,
+    title: "Discover Exciting Air Travel Deals",
+    text: "Global Destinations",
+    image: airplane,
   },
 ];

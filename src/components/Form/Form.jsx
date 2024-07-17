@@ -1,5 +1,7 @@
-import { IoCall, IoMail } from "react-icons/io5";
 import "./Form.scss";
+
+// Icons
+import { IoCall, IoMail } from "react-icons/io5";
 import { FaLocationPin } from "react-icons/fa6";
 
 function Form() {

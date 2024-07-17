@@ -3,8 +3,65 @@ import "./Form.scss";
 // Icons
 import { IoCall, IoMail } from "react-icons/io5";
 import { FaLocationPin } from "react-icons/fa6";
+import { useRef } from "react";
+import { toast } from "react-toastify";
 
 function Form() {
+  const form = useRef();
+  const formName = useRef();
+  const formPhone = useRef();
+  const formGuests = useRef();
+  const formDate = useRef();
+  const formDestination = useRef();
+  const formVisa = useRef();
+
+  const token = "7313239532:AAGMnRs1n3-z-hVkDPTdGb8cG9pNxL7YzcI";
+  const chat_id = 714012440;
+  const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+  const postData = async (e) => {
+    e.preventDefault();
+
+    const data = {
+      name: formName.current.value,
+      phone: formPhone.current.value,
+      guests: formGuests.current.value,
+      date: formDate.current.value,
+      destination: formDestination.current.value,
+      visa: formVisa.current.value,
+    };
+
+    form.current.reset();
+
+    const { name, phone, guests, date, destination, visa } = data;
+
+    const postRequest = fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        chat_id,
+        text: `Name: ${name} \nPhone number: ${phone} \nNumber of Guests: ${guests} \nDate: ${date} \nDestination: ${destination} \nVisa Support: ${visa}`,
+      }),
+    }).then((response) => {
+      if (!response.ok) {
+        throw new Error(`${response.status} Something went wrong!`);
+      }
+      return response;
+    });
+
+    toast.promise(postRequest, {
+      pending: "Sending data...",
+      success: "Your data is sent successfully!",
+      error: {
+        render({ data }) {
+          return `Error: ${data.message}`;
+        },
+      },
+    });
+  };
+
   return (
     <section className="form">
       <div className="container">
@@ -49,7 +106,7 @@ function Form() {
           className="form__map"
         ></iframe>
 
-        <form className="form__content">
+        <form className="form__content" ref={form} onSubmit={postData}>
           <h2 className="form__content-title">
             Make Your <span>Reservation</span> Through This <span>Form</span>
           </h2>
@@ -58,6 +115,7 @@ function Form() {
             <label>
               <span>Your Name</span>
               <input
+                ref={formName}
                 type="text"
                 placeholder="Ex. John Smithee"
                 required
@@ -68,6 +126,7 @@ function Form() {
             <label>
               <span>Your Phone Number</span>
               <input
+                ref={formPhone}
                 type="tel"
                 placeholder="Ex. +99899 999 99 99"
                 required
@@ -79,7 +138,7 @@ function Form() {
           <div className="form__content-row">
             <label>
               <span>Number Of Guests</span>
-              <select name="guests" required>
+              <select ref={formGuests} name="guests" required>
                 <option value="ex. 3 or 4 or 5">ex. 3 or 4 or 5</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -90,13 +149,13 @@ function Form() {
 
             <label>
               <span>Check In Date</span>
-              <input type="date" name="date" required />
+              <input ref={formDate} type="date" name="date" required />
             </label>
           </div>
 
           <label>
             <span>Choose Your Destination</span>
-            <select name="destination" required>
+            <select ref={formDestination} name="destination" required>
               <option value="Antalya">Antalya</option>
               <option value="Istanbul">Istanbul</option>
               <option value="Dubai">Dubai</option>
@@ -109,7 +168,7 @@ function Form() {
 
           <label>
             <span>Choose Your Visa Support</span>
-            <select name="visa" required>
+            <select ref={formVisa} name="visa" required>
               <option value="USA">USA</option>
               <option value="Europe">Europe</option>
               <option value="England">England</option>

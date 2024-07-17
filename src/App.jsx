@@ -10,9 +10,25 @@ import Contacts from "./components/Contacts/Contacts";
 import Form from "./components/Form/Form";
 import Footer from "./components/Footer/Footer";
 
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function App() {
   return (
     <>
+      {/* Notification */}
+      <ToastContainer
+        position="top-right"
+        hideProgressBar={false}
+        newestOnTop={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition:Bounce
+      />
+
       {/* Navbar */}
       <Navbar />
 

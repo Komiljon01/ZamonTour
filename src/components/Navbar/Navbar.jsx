@@ -49,10 +49,10 @@ function Navbar() {
                 <a href="/">{t("navbar.link1")}</a>
               </li>
               <li className="nav__lists-item">
-                <a href="#about">{t("navbar.link2")}</a>
+                <a href="#tours">{t("navbar.link3")}</a>
               </li>
               <li className="nav__lists-item">
-                <a href="#tours">{t("navbar.link3")}</a>
+                <a href="#about">{t("navbar.link2")}</a>
               </li>
               <li className="nav__lists-item">
                 <a href="#contacts">{t("navbar.link4")}</a>

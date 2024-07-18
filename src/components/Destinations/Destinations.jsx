@@ -24,7 +24,7 @@ function Destinations() {
     },
   ];
   return (
-    <section className="destinations">
+    <section className="destinations" id="about">
       <div className="container">
         <h2 className="destinations__title">{t("destinations.title")}</h2>
         <p className="destinations__text">{t("destinations.text")}</p>

@@ -97,7 +97,7 @@ function Offers() {
     },
   ];
   return (
-    <section className="offers">
+    <section className="offers" id="tours">
       <h2 className="offers__title">{t("offers.title")}</h2>
       <p className="offers__text">{t("offers.text")}</p>
 

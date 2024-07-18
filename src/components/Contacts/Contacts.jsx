@@ -4,7 +4,7 @@ import "./Contacts.scss";
 function Contacts() {
   const { t } = useTranslation();
   return (
-    <section className="contacts">
+    <section className="contacts" id="contacts">
       <div className="container">
         <p className="contacts__intro">{t("contacts.intro")}</p>
         <span className="contacts__divider"></span>

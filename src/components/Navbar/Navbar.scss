@@ -130,7 +130,12 @@
       height: 100vh;
       top: 0;
       right: 0;
-      background-color: rgb(34, 179, 193);
+      background-image: url("../../assets/images/parachute.jpg");
+      background-color: rgba(0, 0, 0, 0.4);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      background-blend-mode: multiply;
       flex-direction: column;
       justify-content: center;
       gap: 20px;
@@ -146,6 +151,10 @@
         position: absolute;
         top: 25px;
         right: 20px;
+      }
+
+      .nav__lang {
+        background-color: transparent;
       }
 
       .nav__lists,

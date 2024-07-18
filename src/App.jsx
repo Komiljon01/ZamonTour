@@ -12,8 +12,22 @@ import Footer from "./components/Footer/Footer";
 
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Loader from "./components/Loader/Loader";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [loader, setLoader] = useState(true);
+  const [contentVisible, setContentVisible] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setContentVisible(true);
+      setTimeout(() => {
+        setLoader(false);
+      }, 500);
+    }, 1000);
+  }, []);
+
   return (
     <>
       {/* Notification */}
@@ -28,6 +42,8 @@ function App() {
         theme="light"
         transition:Bounce
       />
+
+      {loader && <Loader contentVisible={contentVisible} />}
 
       {/* Navbar */}
       <Navbar />

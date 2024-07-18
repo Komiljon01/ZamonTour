@@ -32,6 +32,27 @@ html {
   scroll-behavior: smooth;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #22b3c1;
+  transition: background 0.3s ease;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1d9ba6;
+}
+
 .swiper {
   width: 100%;
   height: 100%;

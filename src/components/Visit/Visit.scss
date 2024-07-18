@@ -191,9 +191,18 @@
   }
 }
 
+@media screen and (max-width: 500px) {
+  .visit {
+    &__title {
+      line-height: 25px;
+    }
+  }
+}
+
 @media screen and (max-width: 400px) {
   .visit {
     &__text {
+      margin-top: 10px;
       line-height: 20px;
       font-size: 13px;
     }

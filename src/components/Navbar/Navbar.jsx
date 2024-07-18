@@ -5,10 +5,19 @@ import { FaInstagram } from "react-icons/fa";
 import { CgMenuLeft } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function Navbar() {
   const [openMenu, setOpenMenu] = useState(false);
   const [navbar, setNavbar] = useState(false);
+  const { t, i18n } = useTranslation();
+  const language = localStorage.getItem("i18nextLng");
+
+  const changeLanguage = (e) => {
+    const selectedLanguage = e.target.value;
+    i18n.changeLanguage(selectedLanguage);
+    setOpenMenu(false);
+  };
 
   const setNavbarFixed = () => {
     if (window.scrollY >= 700) {
@@ -37,25 +46,29 @@ function Navbar() {
             />
             <ul className="nav__lists">
               <li className="nav__lists-item active">
-                <a href="/">Home</a>
+                <a href="/">{t("navbar.link1")}</a>
               </li>
               <li className="nav__lists-item">
-                <a href="#about">About</a>
+                <a href="#about">{t("navbar.link2")}</a>
               </li>
               <li className="nav__lists-item">
-                <a href="#tours">Tours</a>
+                <a href="#tours">{t("navbar.link3")}</a>
               </li>
               <li className="nav__lists-item">
-                <a href="#contacts">Contacts</a>
+                <a href="#contacts">{t("navbar.link4")}</a>
               </li>
             </ul>
 
             <div className="nav__lang-socialmedia">
-              <div className="nav__lang">
-                <a href="#">Eng</a>
-                <a href="#">UZ</a>
-                <a href="#">RU</a>
-              </div>
+              <select
+                className="nav__lang"
+                onChange={changeLanguage}
+                value={language}
+              >
+                <option value="eng">Eng</option>
+                <option value="ru">Ru</option>
+                <option value="uz">Uz</option>
+              </select>
               <div className="nav__socialmedia">
                 <a href="#">
                   <SiTelegram />

@@ -288,3 +288,11 @@
     }
   }
 }
+
+@media screen and (max-width: 315px) {
+  .form {
+    &__map {
+      margin-top: 480px;
+    }
+  }
+}

@@ -2,7 +2,7 @@
   padding: 70px 100px;
 
   &__title {
-    width: 50%;
+    width: 70%;
     margin: 0 auto;
     text-align: center;
     margin-bottom: 20px;
@@ -13,7 +13,7 @@
   }
 
   &__text {
-    width: 50%;
+    width: 70%;
     margin: 0 auto 50px;
     text-align: center;
     font-size: 15px;
@@ -148,12 +148,10 @@
     p {
       color: #afafaf;
       font-size: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-
+      text-align: left;
+      vertical-align: middle;
       .offers__item-info-icon {
-        font-size: 18px;
+        font-size: 14px;
         margin-right: 3px;
       }
     }
@@ -236,7 +234,7 @@
   .offers {
     &__title,
     &__text {
-      width: 75%;
+      width: 90%;
     }
     .swiper-button-next {
       right: 43%;
@@ -254,7 +252,7 @@
     padding-bottom: 50px;
     &__title {
       font-size: 25px;
-      line-height: 20px;
+      line-height: 30px;
     }
 
     &__text {
@@ -304,16 +302,16 @@
     }
 
     .swiper-wrapper {
-      padding-bottom: 140px;
+      padding-bottom: 180px;
     }
 
     .swiper-button-next {
-      margin-top: 180px;
+      margin-top: 200px;
       right: 42%;
     }
 
     .swiper-button-prev {
-      margin-top: 180px;
+      margin-top: 200px;
       left: 42%;
     }
 
@@ -400,7 +398,7 @@
     }
 
     .swiper-wrapper {
-      padding: 0 0 120px;
+      padding: 0 0 150px;
     }
 
     .swiper-button-prev,
@@ -415,12 +413,12 @@
 
     .swiper-button-next {
       right: 40%;
-      margin-top: 170px;
+      margin-top: 190px;
     }
 
     .swiper-button-prev {
       left: 40%;
-      margin-top: 170px;
+      margin-top: 190px;
     }
   }
 }
@@ -480,12 +478,18 @@
       }
     }
 
+    .swiper-wrapper {
+      padding-bottom: 130px;
+    }
+
     .swiper-button-next {
       right: 35%;
+      margin-top: 160px;
     }
 
     .swiper-button-prev {
       left: 35%;
+      margin-top: 160px;
     }
   }
 }

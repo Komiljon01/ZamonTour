@@ -1,14 +1,16 @@
+import { useTranslation } from "react-i18next";
 import "./Contacts.scss";
 
 function Contacts() {
+  const { t } = useTranslation();
   return (
     <section className="contacts">
       <div className="container">
-        <p className="contacts__intro">Book Prefered Deal Here</p>
+        <p className="contacts__intro">{t("contacts.intro")}</p>
         <span className="contacts__divider"></span>
-        <h2 className="contacts__title">Make Your Reservation</h2>
+        <h2 className="contacts__title">{t("contacts.title")}</h2>
         <a href="#" className="contacts__btn">
-          Discover more
+          {t("contacts.btn")}
         </a>
       </div>
     </section>

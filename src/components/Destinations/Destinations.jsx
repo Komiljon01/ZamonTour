@@ -1,15 +1,33 @@
-import { destinationsData } from "../../data";
 import "./Destinations.scss";
 
+// Destinations Images
+import train from "../../assets/images/train.jpg";
+import airplane from "../../assets/images/airplane.jpg";
+import { useTranslation } from "react-i18next";
+
 function Destinations() {
+  const { t } = useTranslation();
+
+  // Data
+  const destinationsData = [
+    {
+      id: 23,
+      title: t("destinations.destinationTitle1"),
+      text: t("destinations.destinationSubtitle1"),
+      image: train,
+    },
+    {
+      id: 24,
+      title: t("destinations.destinationTitle2"),
+      text: t("destinations.destinationSubtitle2"),
+      image: airplane,
+    },
+  ];
   return (
     <section className="destinations">
       <div className="container">
-        <h2 className="destinations__title">Explore Destinations With Ease</h2>
-        <p className="destinations__text">
-          Find the best deals on railway and airplane tickets in each city,
-          carefully selected for you.
-        </p>
+        <h2 className="destinations__title">{t("destinations.title")}</h2>
+        <p className="destinations__text">{t("destinations.text")}</p>
 
         <div className="destinations__cards">
           {destinationsData &&
@@ -30,17 +48,12 @@ function Destinations() {
                       <p>{destination.text}</p>
                     </div>
                     <button className="destination__card-btn">
-                      Explore More
+                      {t("exploreBtn")}
                     </button>
                   </div>
 
                   <p className="destination__card-text">
-                    Embark on a railway adventure and explore destinations
-                    worldwide. Whether it&#39;s the picturesque landscapes,
-                    bustling cities, or cultural gems, our rail services offer a
-                    unique and comfortable way to traverse the globe. Immerse
-                    yourself in the beauty of different cultures, all accessible
-                    through our extensive railway network. .
+                    {t("destinations.destinationText")}
                   </p>
                 </div>
               </div>

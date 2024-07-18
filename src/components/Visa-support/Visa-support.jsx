@@ -155,9 +155,9 @@ function VisaSupport() {
                   </p>
                 </div>
 
-                <button className="visa__item-btn">
+                <a href="#contacts" className="visa__item-btn">
                   {t("reservationBtn")}
-                </button>
+                </a>
               </div>
             </SwiperSlide>
           ))}

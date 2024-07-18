@@ -81,9 +81,9 @@ function Visit() {
                       <h3 className="visit__card-title">{visit.title}</h3>
                       <p>{visit.country}</p>
                     </div>
-                    <button className="visit__card-btn">
+                    <a href="#contacts" className="visit__card-btn">
                       {t("exploreBtn")}
-                    </button>
+                    </a>
                   </div>
 
                   <p className="visit__card-text">{visit.info}</p>

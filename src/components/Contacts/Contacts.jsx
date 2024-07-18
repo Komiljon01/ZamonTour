@@ -9,7 +9,7 @@ function Contacts() {
         <p className="contacts__intro">{t("contacts.intro")}</p>
         <span className="contacts__divider"></span>
         <h2 className="contacts__title">{t("contacts.title")}</h2>
-        <a href="#" className="contacts__btn">
+        <a href="#form" className="contacts__btn">
           {t("contacts.btn")}
         </a>
       </div>

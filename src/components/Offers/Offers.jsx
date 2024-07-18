@@ -165,9 +165,9 @@ function Offers() {
                   </p>
                 </div>
 
-                <button className="offers__item-btn">
+                <a href="#contacts" className="offers__item-btn">
                   {t("reservationBtn")}
-                </button>
+                </a>
               </div>
             </SwiperSlide>
           ))}

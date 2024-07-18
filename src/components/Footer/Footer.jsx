@@ -11,7 +11,7 @@ function Footer() {
             <h2>{t("footer.title")}</h2>
             <p>{t("footer.text")}</p>
           </div>
-          <a className="footer__content-btn" href="#">
+          <a className="footer__content-btn" href="#form">
             {t("footer.btn")}
           </a>
         </div>

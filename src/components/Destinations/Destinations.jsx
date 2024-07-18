@@ -47,9 +47,9 @@ function Destinations() {
                       </h3>
                       <p>{destination.text}</p>
                     </div>
-                    <button className="destination__card-btn">
+                    <a href="#contacts" className="destination__card-btn">
                       {t("exploreBtn")}
-                    </button>
+                    </a>
                   </div>
 
                   <p className="destination__card-text">

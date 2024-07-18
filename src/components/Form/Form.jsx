@@ -66,7 +66,7 @@ function Form() {
   };
 
   return (
-    <section className="form">
+    <section className="form" id="form">
       <div className="container">
         <div className="form__cards">
           <div className="form__card">

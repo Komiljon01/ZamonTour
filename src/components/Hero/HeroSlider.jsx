@@ -13,7 +13,7 @@ function HeroSlider({ location, population, territory, avgPrice }) {
       <div className="hero__slider-content">
         <h2 className="hero__slider-title">{t("hero.title")}</h2>
         <h1 className="hero__slider-location">{location}</h1>
-        <button className="hero__slider-content-btn">{t("hero.btn")}</button>
+        <a href="#contacts" className="hero__slider-content-btn">{t("hero.btn")}</a>
 
         <div className="hero__slider-info">
           <div className="hero__slider-population">
@@ -49,7 +49,7 @@ function HeroSlider({ location, population, territory, avgPrice }) {
             </div>
           </div>
 
-          <button className="hero__slider-info_btn">{t("exploreBtn")}</button>
+          <a href="#contacts" className="hero__slider-info_btn">{t("exploreBtn")}</a>
         </div>
       </div>
     </>

@@ -17,11 +17,11 @@
     margin-bottom: 50px;
   }
 
-  .visit__cards {
+  &__cards {
     width: 90%;
   }
 
-  .visit__card {
+  &__card {
     display: flex;
     align-items: start;
     justify-content: space-between;
@@ -33,12 +33,12 @@
       margin: 30px 0;
     }
 
-    .visit__card-img {
+    &-img {
       width: 30%;
       border-radius: 23px;
     }
 
-    .visit__card-intro {
+    &-intro {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -54,7 +54,7 @@
       }
     }
 
-    .visit__card-btn {
+    &-btn {
       font-size: 14px;
       color: #fff;
       background-color: #22b3c1;
@@ -73,14 +73,14 @@
       }
     }
 
-    .visit__card-text {
+    &-text {
       font-size: 15px;
       line-height: 30px;
       color: #afafaf;
       margin-top: 20px;
     }
 
-    .visit__card-numbers {
+    &-numbers {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -104,7 +104,7 @@
       color: #22b3c1;
       font-weight: 600;
 
-      .need__directions-link_icon {
+      &_icon {
         margin-left: 5px;
         transition: transform 0.3s ease;
       }
@@ -120,7 +120,7 @@
 
 @media screen and (max-width: 1000px) {
   .visit {
-    .visit__cards {
+    &__cards {
       width: 100%;
     }
   }
@@ -137,20 +137,25 @@
       margin: 0 auto;
     }
 
-    .visit__cards {
+    &__cards {
       margin-top: 30px;
     }
 
-    .visit__card {
+    &__card {
       flex-direction: column;
 
-      .visit__card-img {
-        width: 50%;
+      &-img {
+        width: 65%;
+        margin: 0 auto;
       }
 
-      .visit__card-intro {
-        justify-content: start;
+      &-intro {
+        justify-content: space-around;
         gap: 30px;
+      }
+
+      &-text {
+        text-align: justify;
       }
     }
   }
@@ -175,14 +180,12 @@
       font-size: 20px;
     }
 
-    .visit__card {
-      .visit__card-img {
+    &__card {
+      &-img {
         width: 100%;
       }
-    }
 
-    .visit__card {
-      .visit__card-intro {
+      &-intro {
         justify-content: space-between;
         gap: 15px 30px;
         flex-wrap: wrap;
@@ -207,8 +210,8 @@
       font-size: 13px;
     }
 
-    .visit__card {
-      .visit__card-intro {
+    &__card {
+      &-intro {
         h3 {
           font-size: 18px;
         }
@@ -216,19 +219,19 @@
         p {
           font-size: 13px;
         }
-
-        .visit__card-btn {
-          font-size: 13px;
-          padding: 10px 20px;
-        }
       }
 
-      .visit__card-text {
+      &-btn {
+        font-size: 13px;
+        padding: 10px 20px;
+      }
+
+      &-text {
         font-size: 13px;
         line-height: 25px;
       }
 
-      .visit__card-numbers {
+      &-numbers {
         border: none;
         flex-wrap: wrap;
         gap: 20px;

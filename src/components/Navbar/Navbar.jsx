@@ -17,6 +17,7 @@ function Navbar() {
     const selectedLanguage = e.target.value;
     i18n.changeLanguage(selectedLanguage);
     setOpenMenu(false);
+    document.body.removeAttribute("style");
   };
 
   const setNavbarFixed = () => {
@@ -25,6 +26,16 @@ function Navbar() {
     } else {
       setNavbar(false);
     }
+  };
+
+  const openMenuBar = () => {
+    setOpenMenu(true);
+    document.body.style.overflowY = "hidden";
+  };
+
+  const closeMenuBar = () => {
+    setOpenMenu(false);
+    document.body.removeAttribute("style");
   };
 
   window.addEventListener("scroll", setNavbarFixed);
@@ -37,13 +48,10 @@ function Navbar() {
             <img src={logo} alt="navbar logo" />
           </a>
 
-          <CgMenuLeft className="open-menu" onClick={() => setOpenMenu(true)} />
+          <CgMenuLeft className="open-menu" onClick={openMenuBar} />
 
           <div className={`nav__menu ${openMenu ? "active" : ""}`}>
-            <IoMdClose
-              className="close-menu"
-              onClick={() => setOpenMenu(false)}
-            />
+            <IoMdClose className="close-menu" onClick={closeMenuBar} />
             <ul className="nav__lists">
               <li className="nav__lists-item active">
                 <a href="/">{t("navbar.link1")}</a>
@@ -70,10 +78,10 @@ function Navbar() {
                 <option value="uz">Uz</option>
               </select>
               <div className="nav__socialmedia">
-                <a href="#">
+                <a href="https://t.me/zamonbiznestour" target="_blank">
                   <SiTelegram />
                 </a>
-                <a href="#">
+                <a href="https://www.instagram.com/zamontour/" target="_blank">
                   <FaInstagram />
                 </a>
               </div>
@@ -81,6 +89,12 @@ function Navbar() {
           </div>
         </div>
       </div>
+
+      <div
+        className="overlay"
+        style={{ display: `${openMenu ? "block" : "none"}` }}
+        onClick={closeMenuBar}
+      ></div>
     </nav>
   );
 }

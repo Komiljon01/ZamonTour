@@ -9,17 +9,103 @@
     color: #fff;
   }
 
-  .swiper-pagination-bullet {
-    background-color: #000;
-    opacity: 0.6;
-  }
-
-  .swiper-pagination-bullet-active {
-    background-color: rgb(34, 179, 193);
-    opacity: 1;
-  }
-
   .swiper-pagination {
-    bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    bottom: 80px;
+
+    &-bullet {
+      width: 10%;
+      height: 2px;
+      border-radius: 0;
+      background-color: #f6eac5;
+      opacity: 0.6;
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 30px;
+        color: #fff;
+        font-size: 20px;
+        transform: translate(-50%, -50%);
+        opacity: 1;
+      }
+
+      &:nth-child(1)::after {
+        content: "1";
+      }
+      &:nth-child(2)::after {
+        content: "2";
+      }
+      &:nth-child(3)::after {
+        content: "3";
+      }
+      &:nth-child(4)::after {
+        content: "4";
+      }
+
+      &-active {
+        opacity: 1;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgb(34, 179, 193);
+          animation: fillColor 4.1s forwards linear;
+        }
+      }
+    }
+  }
+}
+
+@keyframes fillColor {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  #hero {
+    .swiper-pagination {
+      &-bullet {
+        width: 15%;
+        bottom: -10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #hero {
+    .swiper-pagination {
+      &-bullet {
+        width: 15%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #hero {
+    .swiper-pagination {
+      gap: 5px;
+
+      &-bullet {
+        bottom: 10px;
+
+        &::after {
+          font-size: 16px;
+          top: 20px;
+        }
+      }
+    }
   }
 }

@@ -103,7 +103,7 @@ function Visit() {
                     </div>
                   </div>
 
-                  <a href="#" className="need__directions-link">
+                  <a href="#contacts" className="need__directions-link">
                     {t("visit.needDirection")}{" "}
                     <GrLinkNext className="need__directions-link_icon" />
                   </a>

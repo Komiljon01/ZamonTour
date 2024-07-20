@@ -16,7 +16,7 @@
     margin-bottom: 50px;
   }
 
-  .destinations__cards {
+  &__cards {
     width: 90%;
   }
 
@@ -31,12 +31,12 @@
       margin-bottom: 30px;
     }
 
-    .destionation__card-img {
+    &-img {
       width: 30%;
       border-radius: 23px;
     }
 
-    .destination__card-intro {
+    &-intro {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -52,7 +52,7 @@
       }
     }
 
-    .destination__card-btn {
+    &-btn {
       font-size: 14px;
       color: #fff;
       background-color: #22b3c1;
@@ -71,7 +71,7 @@
       }
     }
 
-    .destination__card-text {
+    &-text {
       font-size: 15px;
       line-height: 30px;
       color: #afafaf;
@@ -82,7 +82,7 @@
 
 @media screen and (max-width: 1000px) {
   .destinations {
-    .destinations__cards {
+    &__cards {
       width: 100%;
     }
   }
@@ -98,13 +98,18 @@
     .destination__card {
       flex-direction: column;
 
-      .destionation__card-img {
-        width: 50%;
+      &-img {
+        width: 65%;
+        margin: 0 auto;
       }
 
-      .destination__card-intro {
-        justify-content: start;
+      &-intro {
+        justify-content: center;
         gap: 30px;
+      }
+
+      &-text {
+        text-align: justify;
       }
     }
   }
@@ -130,13 +135,11 @@
     }
 
     .destination__card {
-      .destionation__card-img {
+      &-img {
         width: 100%;
       }
-    }
 
-    .destination__card {
-      .destination__card-intro {
+      &-intro {
         justify-content: space-between;
         gap: 15px 30px;
         flex-wrap: wrap;
@@ -161,7 +164,7 @@
     }
 
     .destination__card {
-      .destination__card-intro {
+      &-intro {
         h3 {
           font-size: 18px;
         }
@@ -170,13 +173,13 @@
           font-size: 13px;
         }
 
-        .destination__card-btn {
+        &-btn {
           font-size: 13px;
           padding: 10px 20px;
         }
       }
 
-      .destination__card-text {
+      &-text {
         font-size: 13px;
         line-height: 25px;
       }

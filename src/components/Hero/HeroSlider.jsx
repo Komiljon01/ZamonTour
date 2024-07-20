@@ -57,3 +57,27 @@ function HeroSlider({ location, population, territory, avgPrice }) {
 }
 
 export default HeroSlider;
+
+/* 
+  &::after {
+      position: absolute;
+      top: 30px;
+      color: #fff;
+      font-size: 20px;
+      transform: translate(-50%, -50%);
+      opacity: 1;
+    }
+
+    &:nth-child(1)::after {
+      content: "1";
+    }
+    &:nth-child(2)::after {
+      content: "2";
+    }
+    &:nth-child(3)::after {
+      content: "3";
+    }
+    &:nth-child(4)::after {
+      content: "4";
+    }
+*/

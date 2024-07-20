@@ -34,7 +34,7 @@ function Destinations() {
             destinationsData.map((destination) => (
               <div className="destination__card" key={destination.id}>
                 <img
-                  className="destionation__card-img"
+                  className="destination__card-img"
                   src={destination.image}
                   alt={destination.title}
                 />

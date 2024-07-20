@@ -21,7 +21,9 @@ function Footer() {
         <div className="container">
           <p>
             {t("footer.copyrightsText1")}&nbsp;
-            <a href="#">{t("footer.copyrightsText2")}</a>
+            <a href="https://t.me/zamonbiznestour" target="_blank">
+              {t("footer.copyrightsText2")}
+            </a>
             &nbsp;{t("footer.copyrightsText3")}
           </p>
         </div>

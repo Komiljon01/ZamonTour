@@ -9,6 +9,17 @@
   z-index: 7;
   transition: position 0.3s ease;
 
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 8;
+    transition: display 0.3s ease;
+  }
+
   &.activeNav {
     position: fixed;
   }
@@ -72,13 +83,11 @@
       }
     }
 
-    .nav__lists a:hover {
-      color: gainsboro;
-    }
+    .nav__lists li {
+      position: relative;
 
-    .nav__lists li.active {
-      a {
-        position: relative;
+      a:not(.nav__lists li:nth-child(1)):hover {
+        color: gainsboro;
 
         &::before {
           position: absolute;
@@ -86,34 +95,46 @@
           top: -3px;
           width: 50%;
           height: 1.5px;
-          background-color: #fff;
+          background-color: gainsboro;
           transition: background-color 0.3s ease;
         }
+      }
+    }
+
+    .nav__lists li.active a {
+      &::before {
+        position: absolute;
+        content: "";
+        top: -3px;
+        width: 50%;
+        height: 1.5px;
+        background-color: #fff;
+        transition: background-color 0.3s ease;
       }
 
       &:hover a::before {
         background-color: gainsboro !important;
       }
     }
+  }
 
-    .nav__lists-item {
-      padding: 8px 0;
+  .nav__lists-item {
+    padding: 8px 0;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .nav__lang-socialmedia,
+  .nav__socialmedia {
+    gap: 20px;
+
+    a {
       font-size: 15px;
-      letter-spacing: 0.5px;
     }
+  }
 
-    .nav__lang-socialmedia,
-    .nav__socialmedia {
-      gap: 20px;
-
-      a {
-        font-size: 15px;
-      }
-    }
-
-    .nav__lang a:hover {
-      color: #000;
-    }
+  .nav__lang a:hover {
+    color: #000;
   }
 }
 
@@ -168,6 +189,6 @@
 
 @media screen and (max-width: 300px) {
   .nav .nav__menu {
-    width: 80%;
+    width: 100%;
   }
 }
